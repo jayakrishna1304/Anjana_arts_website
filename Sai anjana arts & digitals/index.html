@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Images</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Parisienne&family=Tangerine:wght@700&family=Sacramento&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="preloader">
+        <img src="logos/Adobe Express - file.png" class="preloader-logo" alt="Anjana Logo">
+    </div>
+    
+    <!-- Your main website content -->
+    <div id="main-content" style="display: none;">
+        <!-- Your website content goes here -->
+    </div>    
+
+    <div class="navv">
+        <div class="logo-container">
+            <img src="logos/Adobe Express - file.png" class="anjana-logo" alt="a-logo">
+            <span class="anjana-name">Anjana</span>
+        </div>
+        <div class="nav-links">
+        <ul>
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>About Us</a></li>
+            <li><a href='#'>Our services</a></li>
+            <li><a href='#'>Portfolio</a></li>
+            <li><a href='#'>Contact Us</a></li>
+        </ul>
+        </div>
+    </div>
+
+
+        <div class="contact-info">
+            <h2>Arts & Digitals</h2>
+            <img src="logos/maiil-removebg-preview.png" class="logo-m" alt="mail logo">
+            <p1>saianjanadigitals@gmail.com</p1>
+            <img src="logos/cell2.png" class="logo" alt="cell logo">
+            <p2>990 864 2393, 812 557 0318</p2>
+        </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="logos/sai-anjana-arts-and-digitals-kukatpally-hyderabad-printing-press-un0hyr4mal.jpg" alt="Image 1">
+        </div>
+            <div class="slide">
+                <img src="logos/IMG_20250310_225837.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="logos/Anjana Card front.JPG" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="logos/Anjana Card new B (1).jpg" alt="Image 4">
+            </div>
+        </div>
+        <div class="dots-container">
+            <span class="dot" onclick="moveSlide(0)"></span>
+            <span class="dot" onclick="moveSlide(1)"></span>
+            <span class="dot" onclick="moveSlide(2)"></span>
+            <span class="dot" onclick="moveSlide(3)"></span>
+        </div>
+    </div>
+    <!-- <div class="shaded-line-container">
+        <span class="line-text">About Us</span>
+    </div> -->
+
+    <section class="about-section">
+        <div class="shaded-line-container">
+            <span class="line-text">About Us</span>
+        </div>
+        <div class="about-content">
+            <p>
+                <strong>Sai Anjana Arts & Digitals</strong>, Established in 2006, Has Been a Trusted Name in 
+                Flex Printing, LED Boards, Painting Art & Vinyl Printing.<br> We Specialize in Creating High-Quality 
+                Printing, Artistic Designs, and Customized Branding Solutions For Businesses as well as individuals.<br> 
+                From Eye-Catching Banners to intricate Wall Paintings and Durable Vinyl Printing, We Bring 
+                Creativity and Precision to Every Project.<br> Our Commitment to Excellence & Customer 
+                Satisfaction Has Helped Us Build a Strong Reputation Over the Years...
+            </p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="image-container">
+            <img src="logos/Website Design card Nanna.PNG" alt="Image 1">
+        </div>
+        <div class="text-container">
+            <h1>Founder & CEO</h1>
+            <h2>K.J.Chary</h2>
+        </div>
+            
+    </div>
+    <div class="container-a">
+        <div class="container-image1">
+            <img src="logos/Chiranjeevi copy.PNG" alt="Image 1">
+        </div>
+        <div class="container-image1">
+            <img src="logos/Chicha .PNG" alt="Image 1">
+        </div>
+        <div class="container-image1">
+            <img src="logos/Malli copy.PNG" alt="Image 1">
+        </div>
+
+    </div>
+
+    <div class="container-b">
+        <div class="shaded-line-container">
+            <span class="line-text">Our Services</span>
+        </div>
+        <div class="services-content">
+            <div class="service-item" onclick="showServiceModal('Flex Banners')">🎯 Flex Banners</div>
+            <div class="service-item" onclick="showServiceModal('LED Sign Boards')">✨ LED Sign Boards</div>
+            <div class="service-item" onclick="showServiceModal('Flex Boards')">🎯 Flex Boards</div>
+            <div class="service-item" onclick="showServiceModal('Vinyl Printing')">🎯 Vinyl Printing</div>
+            <div class="service-item" onclick="showServiceModal('Glow Sign Boards')">🔆 Glow Sign Boards</div>
+            <div class="service-item" onclick="showServiceModal('One Way Vision')">🎯 One Way Vision</div>
+            <div class="service-item" onclick="showServiceModal('ACP Works')">🎯 ACP Works</div>
+            <div class="service-item" onclick="showServiceModal('Visiting Cards')">🎯 Visiting Cards</div>
+            <div class="service-item" onclick="showServiceModal('School Cartoon Painting')">🖌️ School Cartoon Painting</div>
+        </div>
+        <div id="serviceModal" class="modal">
+            <div class="modal-content">
+                <h2 id="selectedService"></h2>
+                <button class="btn-service" onclick="showContactModal()">I Want This Service</button>
+                <button class="btn-close" onclick="closeModal('serviceModal')">Close</button>
+            </div>
+        </div>
+    
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <h2>Contact Us:</h2>
+                <button class="btn-call" onclick="callUs()">📞 Via Call</button>
+                <button class="btn-whatsapp" onclick="whatsappUs()">💬 Via WhatsApp</button>
+                <button class="btn-close" onclick="closeModal('contactModal')">Close</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
